@@ -11,16 +11,16 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="{{ "./"|relative }}">
-            <span class="hidden-xs hidden-sm">WBMA 2019</span>
-            <span class="hidden-md hidden-lg">WBMA 2019</span>
+            <span class="hidden-xs hidden-sm">LIFT LEARNING 2019</span>
+            <span class="hidden-md hidden-lg">LIFT LEARNING 2019</span>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li{% if page == 'index.html' %} class="active"{% endif %}><a href="/">Home</a></li>
             {% for text, url in [
-                ('Topics of Interest', 'toi.html'),
-                ('Paper Submission', 'paper_submission.html'),
-                ('Committees', 'committees.html')
+                ('TODO 1', '#todo.html'),
+                ('TODO 2', '#todo.html'),
+                ('TODO 3', '#todo.html')
               ] -%}
               <li{% if page == url %} class="active"{% endif %}><a href="{{ url|relative }}">{{ text }}</a></li>
             {% endfor %}
