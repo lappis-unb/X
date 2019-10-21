@@ -12,3 +12,7 @@ build:
 
 open:
 	xdg-open index.html
+
+update:
+	git add .
+	git commit -m 'update HTML'

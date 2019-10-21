@@ -1,7 +1,31 @@
-# website sources
+# LIFT 2019 site
 
-This website is built with [Genja](https://github.com/AlexandreDecan/Genja), a minimalist static website generator written specifically for WBMA 2019. It is built on top of [Jinja2](https://jinja.pocoo.org/docs/latest/), a powerful template engine written in Python. The layout of the website relies on [Bootstrap 3](https://getbootstrap.com/docs/3.3/). 
+Site construido com [Genja](https://github.com/AlexandreDecan/Genja), um gerador minimalista de site estático.
 
-Any modification or pull request should be done on the "sources" branch. Please note that NO modification should be done on the "master" branch on GitHub. Every commit done in the sources branch triggers an automatic build (thanks to Travis-CI) by Genja, and an automatic deployment to GitHub pages (ie. the content of the output folder will be copied as-is to the master branch). Notice that any "invalid" modification (ie. any modifications that lead to something that cannot be processed by Genja) will not be deployed. The "build status" badge informs you of the status of the latest build. 
+Os estáticos HTML e sources (arquivos Genja) estão mantidos numa mesma branch
+chamada `master`, os fontes estão no diretório `src/` e conteúdos devem ser
+atualizados a partir deste diretório.
 
-If you want to locally test your modifications before pushing them, go to the Genja repository and download both ``genja.py`` and ``requirements.txt``. The script requires Python >= 3.4, and some dependencies that can be easily installed using ``pip install -r requirements.txt``. Then simply type ``python genja.py`` at the root of this repository to build the pages. 
+## Instalar ou atualizar dependencias Python para build
+
+```bash
+make upgrade
+```
+
+## Build (ou como atualizar HTML estático)
+
+```bash
+make build
+```
+
+## Testar local
+
+```bash
+make open
+```
+
+## Commit após build
+
+```bash
+make update
+```
