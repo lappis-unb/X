@@ -10,9 +10,12 @@ build:
 	mv src/output/* .
 	rm -rf src/output
 
-open:
+open: build
 	xdg-open index.html
 
 update:
 	git add .
 	git commit -m 'update HTML'
+
+upload:
+	git push origin master
