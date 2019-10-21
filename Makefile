@@ -5,8 +5,10 @@ upgrade:
 	rm -f requirements.txt
 
 build:
-	cd src/
-	OUTPUT_PATH=.. python3 genja.py
+	cd src/; python3 genja.py
+	rm -rf js css fonts
+	mv src/output/* .
+	rm -rf src/output
 
 open:
 	xdg-open index.html
