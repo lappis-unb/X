@@ -1,9 +1,8 @@
 upgrade:
-	cd src/
-	wget https://raw.githubusercontent.com/AlexandreDecan/genja/master/genja.py -O genja.py
+	wget https://raw.githubusercontent.com/AlexandreDecan/genja/master/genja.py -O src/genja.py
 	wget https://raw.githubusercontent.com/AlexandreDecan/genja/master/requirements.txt -O requirements.txt
 	pip3 install -r requirements.txt
-	rm -f genja.py requirements.txt
+	rm -f requirements.txt
 
 build:
 	cd src/
